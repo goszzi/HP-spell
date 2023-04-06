@@ -1,0 +1,57 @@
+#myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	opacity: 0.5;
+}
+
+body {
+	font-family: 'Harry Potter', sans-serif;
+}
+
+.spell {
+	margin-top: 200px;
+}
+.spell h1 {
+	animation: text-blur-out 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+	display: flex;
+	font-size: 50px;
+	justify-content: center;
+}
+
+@keyframes text-blur-out {
+	0% {
+		filter: blur(0.01);
+	}
+	100% {
+		filter: blur(12px) opacity(0%);
+	}
+}
+
+.spell-name,
+p,
+.description {
+	font-size: 40px;
+	display: flex;
+	justify-content: center;
+	animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 4s both;
+}
+
+@keyframes text-focus-in {
+    0% {
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+
+.spell-name {
+	font-weight: bold;
+	text-transform: uppercase;
+}
